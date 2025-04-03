@@ -287,8 +287,8 @@ dst.set_output()
                     filtered_frame = cv2.resize(filtered_frame, (orig_w, orig_h), interpolation=cv2.INTER_LINEAR)
                 
                 mask = get_mask(original_frame, filtered_frame)
-                # _, mask = cv2.threshold(mask, 0, 255, cv2.THRESH_BINARY)
-                mask = cv2.normalize(mask, None, 0, 255, cv2.NORM_MINMAX)
+                _, mask = cv2.threshold(mask, 0, 255, cv2.THRESH_BINARY)
+                # mask = cv2.normalize(mask, None, 0, 255, cv2.NORM_MINMAX)
                     
                 # 데이터 저장
                 self.origin_images[i] = original_frame
