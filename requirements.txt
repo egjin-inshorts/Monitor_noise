@@ -1,0 +1,10 @@
+opencv-python
+PyQt5
+numpy
+pyyaml
+pillow
+
+# For Scene-Bounday-Detection
+ffmpeg-python
+# torch
+scenedetect

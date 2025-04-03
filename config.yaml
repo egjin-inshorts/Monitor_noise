@@ -1,0 +1,22 @@
+GENERAL_OPTIONS:
+    worker_num: 8
+    batch_size: 25
+
+SCENE_DIVIDE_OPTIONS:
+    model_name: scenedetect
+
+FILTER_OPTIONS:
+    filter_type: DOWN_AND_UP
+    filter_opts:
+        down_and_up:
+            scale: 4
+            mode: 'area'
+        nl_denoise:
+            filter_h: 7
+        tcomb:
+            mode: 2          # 0: luma, 1: chroma, 2: luma+chroma
+            fthreshl: 4      # 밝기 프레임 내 변화 감지 임계값 (낮을수록 민감)
+            fthreshc: 5      # 색상 프레임 내 변화 감지 임계값
+            othreshl: 5      # 밝기 프레임 간 변화 감지 임계값
+            othreshc: 6      # 색상 프레임 간 변화 감지 임계값
+            scthresh: 12.0   # 장면 전환 감지 임계값
